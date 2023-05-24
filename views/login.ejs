@@ -4,7 +4,7 @@
   <script src="https://kit.fontawesome.com/b341104090.js" crossorigin="anonymous"></script>
 </head>
 
-<img src="/imgs/pin.jpeg" class="pic1">
+<img src="/imgs/neon.jpeg" class="pic1">  
 
 <main class="container">
   <div class="row justify-content-center">
@@ -15,7 +15,7 @@
       messages.info.forEach( el => { %>
       <div class="alert alert-info"><%= el.msg %></div>
       <% }) %> <% } %>
-      <form action="/login" method="POST">
+      <form action="/login" method="POST" class="square-container">
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label"
             >Email address</label
@@ -39,6 +39,8 @@
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
+        <p>Dont have an account?</p>
+        <a class="btn btn-primary" href="/signup">sign up</a>
     </section>
   </div>
 </main>
