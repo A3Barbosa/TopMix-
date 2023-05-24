@@ -1,0 +1,148 @@
+*{
+  box-sizing: border-box;
+}
+
+
+
+.top{
+height:160px;
+width:100%;
+border:1px solid black;
+color:white;
+text-align: center;
+background-image: url(../imgs/light.jpeg);
+background-repeat: no-repeat;
+background-size:cover;
+background-position: center center;
+}
+
+h1{
+font-size:3rem;
+}
+
+h3{
+font-size: 1rem;
+margin-top: -2%;;
+}
+
+
+.pic1{
+width:80%;
+}
+
+.nav{
+  list-style: none;
+  color: red;
+    display: flex;
+    gap: 0.625%;
+}
+
+
+.a{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.a{
+  text-decoration: none;
+  color:black;
+}
+
+
+.nav:link,
+.nav:visited,
+.nav:focus {
+  color: black;
+}
+
+
+
+li{
+list-style: none;
+}
+
+
+.a{
+flex: 1;
+text-decoration: none;
+outline: none;
+text-align: center;
+line-height: 1;
+color: black;
+}
+
+.a:hover {
+  background: orange;
+}
+
+/* .img-fluid{
+width:50%;
+} */
+
+.container {
+  padding: 20px;
+}
+
+.row.justify-content-center {
+  justify-content: center;
+}
+
+.list-unstyled {
+  margin: 0;
+  padding: 0;
+}
+
+.news-feed {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-around;
+}
+
+.news-item {
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 200px;
+}
+
+.news-item .drink-container {
+  display: block;
+  width: 280px;
+  height:260px;
+}
+
+.news-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.drinkName-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.drinkName-overlay p {
+  margin: 0;
+}
+
+.buttonOne {
+  margin-right: 10px;
+}
+
+
+#sortForm {
+  margin-top: 20px;
+  color:black;
+}
+

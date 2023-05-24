@@ -1,0 +1,57 @@
+
+<!doctype html>
+<html>
+  <head>
+      <link rel="stylesheet" href="/css/feed.css">
+      <script src="https://kit.fontawesome.com/b341104090.js" crossorigin="anonymous"></script>
+  </head>
+<body>
+  <header>
+   <section class="nav">
+      <a href="/feed" class="a">Home</a>
+			<a href="/upload" class="a">Upload A Picture</a>
+			<a href="/profile" class="a">Profile</a>
+			<a href="/recipe" class="a">Recipes</a>
+			<a href="/favorite" class="a">My Favorite</a>
+   </section>
+  </header>
+  <main>
+    
+   <section class="top">
+    <h1><i class="fa-solid fa-martini-glass-citrus"></i>Top Mix</h1>
+    <h3>Night Feed</h3>
+   </section>
+
+    
+  <div class="container">
+    <div class="row justify-content-center mt-5">
+      <ul class="row list-unstyled news-feed">
+        <% for(var i=0; i<posts.length; i++) {%>
+          <li class="ccol-md-6 col-lg-4 mb-4">
+            <div class="news-item">
+            <a href="/post/<%= posts[i]._id%>" class="drink-container">
+              <img class="img-fluid" src="<%= posts[i].image%>">
+            </a>
+            <div class="drinkName-overlay">
+             <p><%= posts[i].drinkName %></p>
+            </div>
+         </div>
+        </li>
+        <% } %>
+        </ul>
+        <form action="/feed" method="GET" id="sortForm">
+          <div class="radio-button">
+            <input type ="radio" name="sort" value="sortByLikes" class="buttonOne">
+            <label for="sortByLikes">sort by popularity</label>
+          </div>
+          <div class="radio-button">
+            <input type ="radio" name="sort" value="sortByRecent" class="buttonOne">
+            <label for="sortByRecent">sort by most recent</label>
+         </div>
+        </form>
+      </div>
+    </div>  
+  </main>
+   <script type="text/javascript" src="feed.js"></script>
+ </body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="/css/favorite.css">
+    <script src="https://kit.fontawesome.com/b341104090.js" crossorigin="anonymous"></script>
+</head>
+
+<header>
+    <section class="nav">
+       <a href="/feed" class="a">Home</a>
+       <a href="/upload" class="a">Upload A Picture</a>
+       <a href="/profile" class="a">Profile</a>
+       <a href="/recipe" class="a">Recipes</a>
+       <a href="/favorite" class="a">My Favorite</a>
+    </section>
+   </header>
+
+  <h1 class="title">Favorite Drink & Recipe</h1>
+
+  <section class="container">
+    <p>Your Favorite Drink's & Recipe Saved Here:</p>
+ 
+    <%for(var i=0; i<recipes.length; i++) {%>
+     <div class="recipe-container">
+      <h3 class="recipe-name"><%= recipes[i].recipeName %></h3>
+      <ul class="ingredients-list"s>
+      <%for(var j=0; j<recipes[i].ingredients.length; j++) {%>
+      <li><%= recipes[i].ingredients[j]%></li>
+      <% } %>
+      </ul>
+      <h3 class="instructions"><%= recipes[i].instructions %></h3>
+      <form
+      action="/post/deleteFavorite/<%= recipes[i]._id%>?_method=DELETE"
+      method="POST"
+      class="col-3"
+    >
+      <button class="btn btn-primary fa fa-trash" type="submit"></button>
+    </form>
+      <% } %>
+     </div>
+  </section>
+
+<%- include('partials/footer') -%>

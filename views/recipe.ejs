@@ -1,0 +1,54 @@
+<%- include('partials/header') -%>
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="/css/recipe.css">
+    <script src="https://kit.fontawesome.com/b341104090.js" crossorigin="anonymous"></script>
+</head>
+<body>
+ <header> 
+  <section class="list">
+      <a href="/feed">Home</a></li>
+			<a href="/upload">Upload A Picture</a></li>
+			<a href="/profile">Profile</a></li>
+			<a href="/recipe">Recipes</a></li>
+			<a href="/favorite">My Favorite</a></li>
+    </section>
+ </header>
+
+  <section class="layout">
+    <h1>Recipe World</h1>
+  </section>
+
+  <!-- <img src="/imgs/cocktail2.jpeg" class="pic1"> -->
+  <!-- <img src= "https://media.tenor.com/QpSs2LHdjcYAAAAC/cocktail-drinks.gif" class="pic1"> -->
+  <img src="https://static.wixstatic.com/media/84465c_7df556d2553c4aa0b668f0190b38e0a0~mv2.gif" class="pic1">
+  
+ 
+  
+
+
+
+  <h2>search up a drink and get some ingredients to try at home & save them to your favorite page!</h2>
+
+ <section class="box">
+   <section class="miniBox">
+    <input id="recipeSearch" type="text"  name="" value="" placeholder="cocktail name">
+    <button type="button" name="button">click</button>
+   </section>
+  <ul></ul>
+
+
+  <h3 id="show"></h3>
+
+
+  <form id="recipeForm" action="/post/createRecipe" method="POST">
+  <input name="recipeName" id="recipeName" placeholder="give your cocktail a nickname">
+  <input type="hidden" name="instructions" id="instructionsInput">
+  <button type="submit">save recipe</button>
+  </form>
+
+  </section> 
+<script type= "text/javascript" src="main.js"></script>
+</body>
+<%- include('partials/footer') -%>

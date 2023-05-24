@@ -1,0 +1,32 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+background: url(../imgs/cocktail2.jpeg);
+background-size: cover;
+}
+
+.form-label{
+color:white;
+}
+
+.form-text{
+color: white;
+}
+/* .button {
+  font-size: 16px;
+  padding: 5px 10px;
+  margin-right: 10px;
+}
+
+.btn-danger {
+  background-color: #FF6F00;
+  color: #fff;
+  border-color: #FF6F00;
+}
+
+.btn-danger:hover {
+  background-color: #FF8F00;
+  border-color:#FF8F00;
+} */
